@@ -15,6 +15,7 @@ void main() {
 
     stdout.write("Enter ${i + 1} Per:");
     dynamic per = stdin.readLineSync() ?? "0";
+    print("");
 
     mylist[i] = {
       "Id": id,
@@ -22,18 +23,19 @@ void main() {
       "Per": per,
     };
   }
-
+  print("");
   print(mylist);
-
-  dynamic sum=0;
+  print("");
+  double sum = 0.0;
   mylist.forEach((element) {
     element.forEach((key, value) {
-      if(key=="Per")
-      {                                                                                           
-        sum+=value; 
+      if (key == "Per") {
+        print("$key:$value");
+        sum += double.parse(value);
       }
     });
   });
 
-  print("Class's Average:${sum/n}");
+  print("");
+  print("Class's Average:${sum / n}");
 }
