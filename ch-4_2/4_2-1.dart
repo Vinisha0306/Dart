@@ -2,8 +2,8 @@ import 'dart:io';
 
 class Student
 {
-  int rollno=0;
-  String name="no";
+  late int rollno;
+  late String name;
 }
 
 void main()
