@@ -70,7 +70,6 @@ int main()
 
     
     List<supermarket> s1 = List.generate(n, (index) => supermarket());
-    supermarket s2 = supermarket();
     
         s1.forEach((element) {
           element.set_data();
