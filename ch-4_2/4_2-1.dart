@@ -8,14 +8,23 @@ class Student
 
 void main()
 {
-  Student mylist=Student();
+  stdout.write("Enter number of Student:");
+  int n=int.parse(stdin.readLineSync() ?? "0");
+  List<Student> s1 = List.generate(n, (index) => Student());
 
-  stdout.write("Enter roll no:");
-  mylist.rollno = int.parse(stdin.readLineSync() ?? "0");
+  for(int i=0;i<n;i++)
+  {
+    stdout.write("Enter roll no:");
+    s1[i].rollno = int.parse(stdin.readLineSync() ?? "0");
+    stdout.write("Enter Name:");
+    s1[i].name = stdin.readLineSync() ?? "name";
+    print("");
+  }
 
-  stdout.write("Enter Name:");
-  mylist.name = stdin.readLineSync() ?? "name";
-
-  print("Roll no: ${mylist.rollno}");
-  print("Name : ${mylist.name}");
+  for(int i=0;i<n;i++)
+  {
+    print("Roll no: ${s1[i].rollno}");
+    print("Name : ${s1[i].name}");
+    print("");
+  }
 }
