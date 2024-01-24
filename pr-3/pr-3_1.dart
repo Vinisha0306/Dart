@@ -16,7 +16,7 @@ void main()
   stdout.write("Enter number of List:");
   int length = int.parse(stdin.readLineSync() ?? "0");
   List<int> mylist = List.generate(length,(index){
-stdout.write("Enter ${index+1}:");
+  stdout.write("Enter ${index+1} value :");
   return int.parse(stdin.readLineSync() ?? "0");});
 
   print("sum of all List elements:${Allsum(mylist:mylist)}");
